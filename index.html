@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Challenge 3 - Landing API</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1-21RvVUNhDLN8MAmfpFjOJOYE1fCC-A&callback=initMap"
+	    async defer></script>
+	   <!--	<script src="api.openweathermap.org/data/2.5/weather?q=&appid=e86e6d34a8a2d9c6709644754ce41d91" async defer></script> -->
+	    <script src="script.js" defer></script>
+	</head>
+	<body>
+		<figure class="logo">
+			<img class="spacex" src="images/spaceXbig.png" alt="SpaceX logo"/>
+		</figure>
+
+	<section class="grid">
+
+		<section class="landing">
+			<h1>Landingsplek: De Haagse Hogeschool</h1>
+			<div id="map"></div>
+		</section>
+
+		<section class="weather">
+			<h1>Weersvoorspelling</h1>
+  			<p>Bekijk het weer op verschillende locaties.</p>
+  			<section class="block">
+				<div class="input">
+				    <input type="text" placeholder="Enter cityname" class="input_text">
+				    <input type="submit" value="Search" class="submit">
+				</div>
+				<div class="container">
+					<div class="card">
+					    <h1 class="name inline" id="city"></h1>
+					    <p class="temp inline" id="temp"></p>
+					   	<p class="clouds inline" id="weather"></p>
+					    <p class="desc inline" id="description"></p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+	</section>
+	</body>
+</html>
