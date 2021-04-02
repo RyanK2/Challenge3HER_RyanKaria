@@ -44,5 +44,5 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=5
 
 })
 
-.catch(err => alert("This city doesn't exist. (Control the spelling)"));
+.catch(err => alert("This city doesn't exist. (Check the spelling)"));
 })

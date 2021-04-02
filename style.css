@@ -1,11 +1,13 @@
 body {
-	font-family: helvetica;
-	color: #FFFFFF;
-	background-color: #444444;
+	font-family: arial;
+	color: white;
+	background-color: #005288;
+	margin: 0;
 }
 
 h1, p {
 	text-align: center;
+	color: white;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1.3em;
 }
 
 img {
@@ -26,6 +28,12 @@ img {
 	margin-left: 50px;
 }
 
+.weather {
+	margin-top: 5vw;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .inline {
 	display: inline-block;
 	color: white;
@@ -33,36 +41,24 @@ img {
 
 figure {
 	text-align: center;
-	padding-top: 10px;
+	/*padding-top: 10px;*/
+	padding: 0;
+	margin: 0;
+	background-color: white;
 }
 
 #map {
-	margin: 0 auto;
-	width: 50vw;
-	height: 80vh;
 	color: #111;
-	box-shadow: 10px 10px 100px 10px black;
-	border-radius: 20px;
+	width: 100%;
+	height: 50vh;
+	margin: 0;
+
 }
 
 #map img {
 	display: block;
-	margin: 2px 10px 10px 0;
 	float: left;
-	max-width: 100px;
-	border: 1px solid #333;
-	border-radius: 3px;
-	padding-bottom: 20px;
-}
-
-.block {
-	border: 1px solid #333;
-	border-radius: 10px;	
-	box-shadow: 10px 10px 100px 10px black;
-	margin: 2px 10px 10px 10px;
-	padding-bottom: 10px;
-	background-color: #555555;
-	opacity: 80%; 
+	max-width: 100px;	
 }
 
 .grid {
@@ -70,64 +66,144 @@ figure {
 	grid-template-columns: repeat(12, 1fr);
 	grid-row-gap: 10px;
 	grid-auto-rows: auto auto;
-	padding-top: 32px;
 	color: #000;
-	font-weight: bold;
 }
 
-#map {
-	width: 98%;
-	height: 450px;
-	margin-bottom: 15px;
-	border-radius: 5px;
+.block {
+	text-align: center;
+	padding-top: 20px;
 }
 
 input[type="submit"] {
-  padding: 15px 30px;
+  display: block;
+  position: relative;
+  left: 34%;
+  top: 20%;
+  padding: 3vw 10vw;
   background: #e7e7e7;
   border: none;
   border-radius: 20px;
   font-weight:bold;
-  font-size: 15px;
+  font-size: 1em;
+  margin-top: 20px;
 }
 
 .input input[type="text"] {
-  width: 300px;
-  height: 45px;
+  height: 10vw;
+  width: 75vw;
   background: #e7e7e7;
-  padding-left: 20px;
-  margin-left: 40px;
-  margin-right: 10px;
+  text-aling: center;
+  padding-left: 5vw;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   border-radius: 20px;
   font-weight:bold;
-  font-size: 15px;
+  font-size: 1.2em;
 }
 
 .card {
   font-size: 25px;
-  padding: 0px;
+  padding: 5px;
   text-transform: uppercase;
+  color: white;
+}
+
+.container {
+	margin-top: 25px;
+	margin-bottom: 50px;
+	background: green;
 }
 
 #city, #temp, #description {
 	margin-left: 20px;
 }
 
-@media only screen and (min-width: 512px) {
-	.landing, .weather {
-		background: #fff;
-		padding-left: 16px;
-		border-radius: 15px;
+.landing, .weather {
 		grid-column: 1/13;
+	}
+
+	.landing {
+		height: 50vh;
+	}
+
+
+@media only screen and (min-width: 512px) {
+	.block {
+		padding-top: 0;
+	}
+
+	.input {
+		width: 45%;
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 7vw;
+	}
+
+	.input input[type="text"] {
+		width: 30vw;
+		height: 8vw;
+		font-size: 16px;
+	}
+
+	.input input[type="submit"] {
+		left: 29%;
+		font-size: 14px;
+		padding: 2vw 5vw;
+	}
+
+	.container {
+		width: 50%;
+		display: inline-block;
+		height: 30vw;
+		padding-top: 2vw;
+	}
+
+	.weather {
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	input[type="submit"]{
-		margin-top: 20px;
-		margin-left: 40px;	
+	.block {
+		height: 35vw;
+	}
+	
+	.weather, h1, p {
+		text-align: left;
+		padding-left: 3vw;
+	}
 
+	p {
+		max-width: 45%;
+	}
+
+	h1 {
+		line-height: 0.8em;
+	}
+
+	.input input[type="submit"] {
+		left: 0;
+		margin-left: 1vw;
+		border-radius: 50px;
+	}
+
+	.input input[type="text"] {
+		text-align: left;
+		margin-left: -6vw;
+	}
+
+	.input {
+		margin-top: 2vw;
+		padding-left: 0;
+	}
+
+	.container {
+		position: relative;
+		right: 0;
+		top: -20vw;
+		height: 40vw;
 	}
 }
 
@@ -151,5 +227,10 @@ input[type="submit"] {
 	.name {
 		margin: 15px 5px 5px 5px;
 	}
+	.container {
+		width: 50%;
+		height: 100%;
+	}
+
 
 }
