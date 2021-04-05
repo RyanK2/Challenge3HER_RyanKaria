@@ -34,11 +34,6 @@ img {
 	padding-right: 10px;
 }
 
-.inline {
-	display: inline-block;
-	color: white;
-}
-
 figure {
 	text-align: center;
 	/*padding-top: 10px;*/
@@ -56,9 +51,7 @@ figure {
 }
 
 #map img {
-	display: block;
-	float: left;
-	max-width: 100px;	
+	width: 80%;	
 }
 
 .grid {
@@ -107,16 +100,23 @@ input[type="submit"] {
   padding: 5px;
   text-transform: uppercase;
   color: white;
+  box-sizing: border-box;
 }
 
 .container {
 	margin-top: 25px;
 	margin-bottom: 50px;
-	background: green;
+	border: 2px lightgrey solid;
+	background-color: white;
+	border-radius: 10px;
+	color: #005288;
 }
 
-#city, #temp, #description {
-	margin-left: 20px;
+.inline {
+	color: #005288;
+	font-family: Roboto;
+	margin-top: 0;
+	margin-bottom: 5px;
 }
 
 .landing, .weather {
@@ -131,6 +131,14 @@ input[type="submit"] {
 @media only screen and (min-width: 512px) {
 	.block {
 		padding-top: 0;
+	}
+
+	.inline {
+		font-size: 3vw;
+	}
+
+	.card h1 {
+		padding-top: 10px;
 	}
 
 	.input {
@@ -183,6 +191,22 @@ input[type="submit"] {
 		line-height: 0.8em;
 	}
 
+	.card h1 {
+		text-align: center;
+		line-height: 1em;
+		padding-bottom: 10px;
+	}
+
+	.card p {
+		text-align: center;
+		max-width: 100%;
+		padding-bottom: 5px;
+	}
+
+	.card h2 {
+		padding-bottom: 5px;
+	}
+
 	.input input[type="submit"] {
 		left: 0;
 		margin-left: 1vw;
@@ -201,9 +225,17 @@ input[type="submit"] {
 
 	.container {
 		position: relative;
+		padding-top: 20px;
+		padding-bottom: 0px;
 		right: 0;
 		top: -20vw;
 		height: 40vw;
+	}
+}
+
+@media only screen and (min-width: 870px) and (max-width: 1023px) {
+	.container {
+		top: -15vw;
 	}
 }
 
@@ -212,24 +244,84 @@ input[type="submit"] {
 		grid-column-gap: 24px;
 	}
 
+	.inline {
+		padding-left: 0;
+		margin: 0;
+		font-size: 2vw;
+		text-align: center;
+	}
+
+	#temp {
+		text-align: center;
+		font-size: 3em;
+		padding-top: 0.2em;
+		padding-bottom: 0.2em;
+	}
+
+	#city {
+		font-size: 2em;
+	}
+
 	.landing {
-		grid-column: 1/8;
+		grid-column: 1/7;
 	}
 
 	.weather {
-		grid-column: 8/13;
+		grid-column: 7/13;
 	}
 
 	.input {
 		margin-top: 20px;
 	}
 
+	.block {
+		text-align: left;
+	}
+
+	.container {
+		top: 10px;
+		left: 3vw;
+		width: 80%;
+		height: 50vh;
+
+	}
+
+	#map {
+		height: 100vh;
+	}
+
+	p {
+		max-width: 90%;
+	}
+
+	h1 {
+		margin-top: 5px;
+	}
+
 	.name {
 		margin: 15px 5px 5px 5px;
 	}
-	.container {
-		width: 50%;
+
+	.input input[type="submit"] {
+		margin-left: 20px;
+		margin-top: 20px;
+		width: 150px;
+		padding: 15px;
+		display: inline-block;
+	}
+
+	.input input[type="text"] {
+		margin-left: 0;
+		margin-top: 20px;
+		padding: 20px 10px 20px 25px;
 		height: 100%;
+		width: 350px;
+		display: inline-block;
+	}
+
+	.input {
+		margin-left: 3vw;
+		display: flex;
 	}
 
 
